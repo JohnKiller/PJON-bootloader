@@ -1,3 +1,6 @@
 [submodule "PJON"]
 	path = PJON
 	url = https://github.com/gioblu/PJON.git
+[submodule "arduino"]
+	path = arduino
+	url = git://github.com/esmil/oniudra-headers.git
