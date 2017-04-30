@@ -33,6 +33,7 @@
 #define ARDUINO
 
 //AVR includes
+#include <stdlib.h>
 #include <stdint.h>
 #include <string.h>
 #include <avr/io.h>
