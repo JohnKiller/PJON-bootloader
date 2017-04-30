@@ -10,25 +10,23 @@
 	and we are implementing only the minium required functions.
 */
 
-//Arduino Defines
-#define A0 0
+//Input output
 #define LOW 0
 #define HIGH 1
 #define INPUT 0
 #define OUTPUT 1
+void pinMode(int a, int b){
+	//TODO
+};
+int digitalRead(int a){
+	//TODO
+	return 0;
+};
+void digitalWrite(int a, int b){
+	//TODO
+};
 
-//Unimplemented functions
-void pinMode(int a, int b){};
-void delay(int a){};
-void delayMicroseconds(int ms){};
-int digitalRead(int a){return 0;};
-void digitalWrite(int a, int b){};
-int micros(){return 0;};
-int random(int a){return 0;};
-
-//Done
-void randomSeed(int a){};
-int analogRead(int a){return 0;};
+//Thanks to http://stackoverflow.com/questions/23339587/similar-function-arduino-bitwrite
 void bitWrite(uint8_t &x, unsigned int n, bool b){
     if(n <= 7 && n >= 0){
         if(b){
@@ -38,3 +36,21 @@ void bitWrite(uint8_t &x, unsigned int n, bool b){
         }
     }    
 }
+
+//Timing
+int micros(){return 0;};
+void delay(int a){};
+void delayMicroseconds(int ms){};
+
+//Random numbers generation
+#define A0 0
+int analogRead(int a){
+	return 0; //reads A0 just to seed the RNG. Skip for now.
+};
+void randomSeed(int a){
+	//TODO
+};
+int random(int a){
+	//TODO
+	return 0;
+};
