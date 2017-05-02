@@ -73,10 +73,11 @@ void receiver_function(uint8_t *payload, uint16_t length, const PJON_Packet_Info
 int main(void){
 	//we don't care about reset reason
 	MCUSR = 0;
+	initTimings();
 	
 	/*
 		NOTICE: here I am calling every PJON function I will use just to get them compiled,
-		thus getting overall program size. The code is expected to not work, just compile.
+		thus getting overall program size. The code isn't expected to work, just compile.
 	*/
 	bus.strategy.set_pin(12);
 	bus.set_receiver(receiver_function);
